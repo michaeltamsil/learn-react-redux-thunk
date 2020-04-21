@@ -1,11 +1,14 @@
 import axios from 'axios';
 
+//dispatch gunanya itu ke reducers ...
+//biasanya nama objectnya adalah action ... jadi 
 
 export const getSiswa = () => {
     return function(dispatch) {
         axios.get('http://localhost:3500/siswa')
         .then( (response) => {
             //console.log(response);
+            // dispatch akan ke reducers dan ma
             dispatch({
                 type: 'SISWA_LIST',
                 payload: response.data

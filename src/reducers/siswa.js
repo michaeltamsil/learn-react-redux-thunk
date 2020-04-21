@@ -1,6 +1,10 @@
 const initialState = [];
 
-
+// 3 ini adalah function biasa
+// dimana utk memegang data-data siswa
+// jika action.typenya A . maka akan melakukan perintah sesuai dengan action.type nya
+// setelah di return maka yang pakai mapStateToProps dimana "state.siswa" ada yang pakai maka akan melakukan pergantian tampilan
+// karena data berubah
 const siswa = (state = initialState, action) => {
 
     switch (action.type) {

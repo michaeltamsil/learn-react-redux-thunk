@@ -4,9 +4,11 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
 import reducers from './reducers'
-
+// 2. 
 import Siswa from './components/Siswa'
 
+// yang ini menjadikan reducers ke store dan menggunakan plugin namanya applyMiddleware
+// thunk digunakan utk melakukan fetch yang berhubungan dengan async
 const store = createStore(reducers, applyMiddleware(thunk))
 
 store.subscribe(() => {
@@ -16,6 +18,9 @@ store.subscribe(() => {
 })
 
 function App() {
+  // 1. provider selalu di taruh di awal awal app bermula
+  // dan diberikan props dengan nama store dimana valuenya adalah dari combineReducers
+  // ke siswa
   return (
     <Provider store={store}>
       <h1>Aplikasi Sekolah</h1>
