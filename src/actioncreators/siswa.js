@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 export const getSiswa = () => {
     return function(dispatch) {
         axios.get('http://localhost:3500/siswa')
@@ -23,6 +24,23 @@ export const hapusSiswa = id => {
             dispatch({
                 type: 'SISWA_HAPUS',
                 payload: id
+            })
+
+        })
+    }
+}
+
+export const tambahSiswa = data => {
+    return (dispatch) => {
+        axios.post ('http://localhost:3500/siswa', data)
+        .then ( (response) => {
+            
+            dispatch({
+                type: 'SEMBUNYIKAN_TAMBAH_SISWA'
+            })
+            dispatch({
+                type: 'SISWA_TAMBAH',
+                payload: response.data
             })
 
         })

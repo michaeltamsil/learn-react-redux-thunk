@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 
-import siswa from './siswa'
+import aplikasi from './aplikasi';
+import siswa from './siswa';
 
 // state.siswa = siswa
 export default combineReducers({
+    aplikasi,
     siswa
 })
