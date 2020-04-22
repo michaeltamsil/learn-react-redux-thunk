@@ -69,8 +69,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = { 
-    sembunyikanTambahSiswa,
-    tambahSiswa
+    sembunyikanTambahSiswa : sembunyikanTambahSiswa,
+    tambahSiswa : tambahSiswa
  }
 
 export default connect(mapStateToProps, mapDispatchToProps )(Add);

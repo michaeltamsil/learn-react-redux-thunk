@@ -12,7 +12,6 @@ import Siswa from './components/Siswa'
 const store = createStore(reducers, applyMiddleware(thunk))
 
 store.subscribe(() => {
-
   console.log('store.getState()', store.getState())
   
 })

@@ -3,7 +3,6 @@ export const tampilkanTambahSiswa = () => {
         dispatch({
             type: 'TAMPILKAN_TAMBAH_SISWA'
         })
-        
     }
 }
 
