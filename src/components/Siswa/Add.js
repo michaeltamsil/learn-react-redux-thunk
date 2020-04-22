@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import {Button, Form, Modal} from 'react-bootstrap';
 
-import { sembunyikanTambahSiswa } from './../../actioncreators/aplikasi'
+import { sembunyikanTambahSiswa } from './../../actioncreators/siswa'
 import { tambahSiswa } from './../../actioncreators/siswa';
 const Add = (props) => {
     const [data, setData ] = useState({
@@ -64,7 +64,7 @@ const Add = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        show: state.aplikasi.isShowAddSiswa
+        show: state.siswa.isShowAddSiswa
     }
 }
 

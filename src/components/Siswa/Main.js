@@ -39,8 +39,9 @@ const Main = (props) => {
 
 
 const mapStateToProps = (state) => {
+    console.log(state.siswa);
     return {
-        data : state.siswa
+        data : state.siswa.data
     }
 }
 

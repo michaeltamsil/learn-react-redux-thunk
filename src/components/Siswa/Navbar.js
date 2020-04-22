@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { tampilkanTambahSiswa } from './../../actioncreators/aplikasi';
+import { tampilkanTambahSiswa } from './../../actioncreators/siswa';
 
 const Navbar = (props) => {
     const tambahSiswa = () => {

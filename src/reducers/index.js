@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import aplikasi from './aplikasi';
+//import aplikasi from './aplikasi';
 import siswa from './siswa';
 
 // state.siswa = siswa
@@ -10,7 +10,6 @@ import siswa from './siswa';
 // combineReducersnya juga object
 // 3. ke siswa
 export default combineReducers({
-    aplikasi,
     siswa
 })
 
