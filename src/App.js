@@ -11,10 +11,10 @@ import Siswa from './components/Siswa'
 // thunk digunakan utk melakukan fetch yang berhubungan dengan async
 const store = createStore(reducers, applyMiddleware(thunk))
 
-store.subscribe(() => {
-  console.log('store.getState()', store.getState())
+// store.subscribe(() => {
+//   console.log('store.getState()', store.getState())
   
-})
+// })
 
 function App() {
   // 1. provider selalu di taruh di awal awal app bermula

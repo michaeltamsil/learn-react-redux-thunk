@@ -9,25 +9,23 @@ const initialState = {
 // setelah di return maka yang pakai mapStateToProps dimana "state.siswa" ada yang pakai maka akan melakukan pergantian tampilan
 // karena data berubah
 const siswa = (state = initialState, action) => {
-    let newState = {}
+    let newData;
     switch (action.type) {
         case 'SISWA_HAPUS':
-            const newData = state.data.filter( (item) => {
+            newData = state.data.filter( (item) => {
                 if (item.id !== action.payload)
                     return true;
                 return false;
             });
-
-            newState = {...state, data : newData};
-
-            return newState;
+            return {...state, data : newData};
 
         case 'SISWA_LIST':
-            newState = {...state, data : action.payload}
-            return newState;
+            return {...state, data : action.payload};
 
         case 'SISWA_TAMBAH':
-            return [...state, action.payload];
+            const data = action.payload;
+            newData = [...state.data, data]
+            return {...state, data : newData};
         
         case 'TAMPILKAN_TAMBAH_SISWA':
             return {...state, isShowAddSiswa: true };
