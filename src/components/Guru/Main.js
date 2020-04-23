@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { getData, tampilkanTambah } from './../../actioncreators/guru'
 
 import Add from './Add';
+import Edit from './Edit';
 import Item from './Item';
 
 const Main = (props) => {
@@ -35,6 +36,7 @@ const Main = (props) => {
                 </tbody>
             </table>
             <Add/>
+            <Edit/>
         </div>
     )
 }

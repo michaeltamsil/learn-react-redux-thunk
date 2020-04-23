@@ -12,6 +12,7 @@ export const getData = () => {
 
     }
 }
+
 export const tampilkanTambah = () => {
     return (dispatch) => {
         dispatch({
@@ -28,6 +29,24 @@ export const sembunyikanTambah = () => {
     }
 }
 
+export const tampilkanEdit = (data) => {
+    return (dispatch) => {
+        dispatch({
+            type: 'TAMPILKAN_EDIT_GURU',
+            payload: data
+        })
+    }
+}
+
+export const sembunyikanEdit = () => {
+    return (dispatch) => {
+        dispatch({
+            type: 'SEMBUNYIKAN_EDIT_GURU'
+        })
+    }
+}
+
+
 export const simpan = (data) =>{
     return dispatch =>{
         axios.post('http://localhost:3500/guru',data)
@@ -37,6 +56,21 @@ export const simpan = (data) =>{
             })
             dispatch({
                 type: 'GURU_TAMBAH',
+                payload: response.data
+            })
+        })
+    }
+}
+
+export const simpanEdit = (data) =>{
+    return dispatch =>{
+        axios.put(`http://localhost:3500/guru/${data.id}`,data)
+        .then(response => {
+            dispatch({
+                type: 'SEMBUNYIKAN_EDIT_GURU'
+            })
+            dispatch({
+                type: 'GURU_UPDATED',
                 payload: response.data
             })
         })
