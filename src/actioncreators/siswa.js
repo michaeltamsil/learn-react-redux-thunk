@@ -66,7 +66,6 @@ export const tambahSiswa = data => {
                 type: 'SISWA_TAMBAH',
                 payload: response.data
             })
-
         })
     }
 }

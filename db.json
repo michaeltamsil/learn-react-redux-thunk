@@ -40,5 +40,22 @@
       "kelas": "28",
       "id": 11
     }
+  ],
+  "guru": [
+    {
+      "nama": "didi",
+      "jurusan": "electronika",
+      "id": 1
+    },
+    {
+      "nama": "win",
+      "jurusan": "tataboga",
+      "id": 2
+    },
+    {
+      "nama": "eruru",
+      "jurusan": "IT",
+      "id": 3
+    }
   ]
 }

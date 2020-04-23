@@ -12,6 +12,8 @@ const Index = () => {
             <Add/>
         </div>
     )
+
+    
 }
 
 export default Index;
